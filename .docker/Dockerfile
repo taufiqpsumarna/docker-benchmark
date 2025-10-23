@@ -4,7 +4,7 @@ WORKDIR /app
 
 RUN apk add --no-cache bash coreutils curl
 
-COPY yabs.sh .
+COPY scripts/yabs.sh .
 
 RUN chmod +x *.sh
 
