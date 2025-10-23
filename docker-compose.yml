@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  benchmark:
+    container_name: docker-benchmark
+    build:
+      context: .  # Directory containing the Dockerfile
+      dockerfile: .docker/Dockerfile # Name of the Dockerfile within the context
+    volumes:
+      - ./results:/results
+    environment:
+      - MEM_SIZE_MB=1024      # Memory test size
+      - DISK_SIZE_MB=1024     # Disk test size
+    command: /app/yabs.sh
+

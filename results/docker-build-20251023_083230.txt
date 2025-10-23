@@ -1,0 +1,140 @@
+
+[08:32:30] Run #1
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile.benchmark
+#1 transferring dockerfile: 439B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/alpine:3.22.2
+#2 DONE 1.5s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/4] FROM docker.io/library/alpine:3.22.2@sha256:4b7ce07002c69e8f3d704a9c5d6fd3053be500b7f1c69fc0d80990c2ad8dd412
+#4 CACHED
+
+#5 [2/4] RUN apk add --no-cache bash curl build-base
+#5 0.130 fetch https://dl-cdn.alpinelinux.org/alpine/v3.22/main/x86_64/APKINDEX.tar.gz
+#5 0.177 fetch https://dl-cdn.alpinelinux.org/alpine/v3.22/community/x86_64/APKINDEX.tar.gz
+#5 0.423 (1/33) Installing ncurses-terminfo-base (6.5_p20250503-r0)
+#5 0.426 (2/33) Installing libncursesw (6.5_p20250503-r0)
+#5 0.437 (3/33) Installing readline (8.2.13-r1)
+#5 0.440 (4/33) Installing bash (5.2.37-r0)
+#5 0.481 Executing bash-5.2.37-r0.post-install
+#5 0.487 (5/33) Installing libgcc (14.2.0-r6)
+#5 0.489 (6/33) Installing jansson (2.14.1-r0)
+#5 0.497 (7/33) Installing libstdc++ (14.2.0-r6)
+#5 0.513 (8/33) Installing zstd-libs (1.5.7-r0)
+#5 0.519 (9/33) Installing binutils (2.44-r3)
+#5 0.575 (10/33) Installing libmagic (5.46-r2)
+#5 0.601 (11/33) Installing file (5.46-r2)
+#5 0.604 (12/33) Installing libgomp (14.2.0-r6)
+#5 0.608 (13/33) Installing libatomic (14.2.0-r6)
+#5 0.610 (14/33) Installing gmp (6.3.0-r3)
+#5 0.616 (15/33) Installing isl26 (0.26-r1)
+#5 0.629 (16/33) Installing mpfr4 (4.2.1_p1-r0)
+#5 0.635 (17/33) Installing mpc1 (1.3.1-r1)
+#5 0.637 (18/33) Installing gcc (14.2.0-r6)
+#5 1.321 (19/33) Installing libstdc++-dev (14.2.0-r6)
+#5 1.418 (20/33) Installing musl-dev (1.2.5-r10)
+#5 1.466 (21/33) Installing g++ (14.2.0-r6)
+#5 1.706 (22/33) Installing make (4.4.1-r3)
+#5 1.709 (23/33) Installing fortify-headers (1.1-r5)
+#5 1.712 (24/33) Installing patch (2.8-r0)
+#5 1.715 (25/33) Installing build-base (0.5-r3)
+#5 1.715 (26/33) Installing brotli-libs (1.1.0-r2)
+#5 1.722 (27/33) Installing c-ares (1.34.5-r0)
+#5 1.725 (28/33) Installing libunistring (1.3-r0)
+#5 1.735 (29/33) Installing libidn2 (2.3.7-r0)
+#5 1.738 (30/33) Installing nghttp2-libs (1.65.0-r0)
+#5 1.740 (31/33) Installing libpsl (0.21.5-r3)
+#5 1.743 (32/33) Installing libcurl (8.14.1-r2)
+#5 1.749 (33/33) Installing curl (8.14.1-r2)
+#5 1.752 Executing busybox-1.37.0-r19.trigger
+#5 1.761 OK: 251 MiB in 49 packages
+#5 DONE 2.9s
+
+#6 [3/4] RUN for i in $(seq 1 10000); do echo "Line $i" >> /tmp/testfile; done
+#6 DONE 0.2s
+
+#7 [4/4] RUN curl -s https://raw.githubusercontent.com/docker-library/hello-world/master/hello.c -o hello.c   && gcc hello.c -o hello
+#7 DONE 0.5s
+
+#8 exporting to image
+#8 exporting layers
+#8 exporting layers 0.5s done
+#8 writing image sha256:fe61f40db7df12a5975e3a431eb4c6e29c805735d6705e61e04a294d15139bcb done
+#8 naming to docker.io/library/benchmark:test done
+#8 DONE 0.5s
+[Run #1] Build duration: 5.766054116s
+
+[08:32:35] Run #2
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile.benchmark
+#1 transferring dockerfile: 439B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/alpine:3.22.2
+#2 DONE 0.3s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/4] FROM docker.io/library/alpine:3.22.2@sha256:4b7ce07002c69e8f3d704a9c5d6fd3053be500b7f1c69fc0d80990c2ad8dd412
+#4 DONE 0.0s
+
+#5 [2/4] RUN apk add --no-cache bash curl build-base
+#5 CACHED
+
+#6 [3/4] RUN for i in $(seq 1 10000); do echo "Line $i" >> /tmp/testfile; done
+#6 CACHED
+
+#7 [4/4] RUN curl -s https://raw.githubusercontent.com/docker-library/hello-world/master/hello.c -o hello.c   && gcc hello.c -o hello
+#7 CACHED
+
+#8 exporting to image
+#8 exporting layers done
+#8 writing image sha256:fe61f40db7df12a5975e3a431eb4c6e29c805735d6705e61e04a294d15139bcb done
+#8 naming to docker.io/library/benchmark:test done
+#8 DONE 0.0s
+[Run #2] Build duration: .392615930s
+
+[08:32:36] Run #3
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile.benchmark
+#1 transferring dockerfile: 439B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/alpine:3.22.2
+#2 DONE 0.3s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/4] FROM docker.io/library/alpine:3.22.2@sha256:4b7ce07002c69e8f3d704a9c5d6fd3053be500b7f1c69fc0d80990c2ad8dd412
+#4 DONE 0.0s
+
+#5 [2/4] RUN apk add --no-cache bash curl build-base
+#5 CACHED
+
+#6 [3/4] RUN for i in $(seq 1 10000); do echo "Line $i" >> /tmp/testfile; done
+#6 CACHED
+
+#7 [4/4] RUN curl -s https://raw.githubusercontent.com/docker-library/hello-world/master/hello.c -o hello.c   && gcc hello.c -o hello
+#7 CACHED
+
+#8 exporting to image
+#8 exporting layers done
+#8 writing image sha256:fe61f40db7df12a5975e3a431eb4c6e29c805735d6705e61e04a294d15139bcb done
+#8 naming to docker.io/library/benchmark:test done
+#8 DONE 0.0s
+[Run #3] Build duration: .390901726s
+
+Final image size: 252MB

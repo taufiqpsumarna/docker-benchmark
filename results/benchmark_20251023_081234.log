@@ -1,0 +1,28 @@
+
+[08:12:34] Starting Docker Benchmark...
+
+[08:12:34] === CPU Benchmark ===
+
+[08:12:34] Running 2000 SHA256 hashes...
+
+[08:12:36] CPU Test Duration: 2.575086850s
+
+[08:12:36] === Memory Benchmark ===
+
+[08:12:36] Writing 1024MB to memory...
+
+[08:12:36] Memory Test Duration: .027513811s
+
+[08:12:36] === Disk I/O Benchmark ===
+
+[08:12:36] Writing 1024MB file...
+
+[08:12:43] Write Duration: 7.192017740s
+
+[08:12:43] Reading 1024MB file...
+
+[08:12:52] Read Duration: 8.182190913s
+
+[08:12:52] === Benchmark Completed ===
+
+[08:12:52] Results stored in ./results/benchmark_20251023_081234.log

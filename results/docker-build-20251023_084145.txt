@@ -1,0 +1,104 @@
+
+[08:41:45] Run #1
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile.benchmark
+#1 transferring dockerfile: 439B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/alpine:3.22.2
+#2 DONE 0.8s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/4] FROM docker.io/library/alpine:3.22.2@sha256:4b7ce07002c69e8f3d704a9c5d6fd3053be500b7f1c69fc0d80990c2ad8dd412
+#4 DONE 0.0s
+
+#5 [3/4] RUN for i in $(seq 1 10000); do echo "Line $i" >> /tmp/testfile; done
+#5 CACHED
+
+#6 [2/4] RUN apk add --no-cache bash curl build-base
+#6 CACHED
+
+#7 [4/4] RUN curl -s https://raw.githubusercontent.com/docker-library/hello-world/master/hello.c -o hello.c   && gcc hello.c -o hello
+#7 CACHED
+
+#8 exporting to image
+#8 exporting layers done
+#8 writing image sha256:fe61f40db7df12a5975e3a431eb4c6e29c805735d6705e61e04a294d15139bcb done
+#8 naming to docker.io/library/benchmark:test done
+#8 DONE 0.0s
+[Run #1] Build duration: .978564034s
+
+[08:41:46] Run #2
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile.benchmark
+#1 transferring dockerfile: 439B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/alpine:3.22.2
+#2 DONE 0.3s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/4] FROM docker.io/library/alpine:3.22.2@sha256:4b7ce07002c69e8f3d704a9c5d6fd3053be500b7f1c69fc0d80990c2ad8dd412
+#4 DONE 0.0s
+
+#5 [2/4] RUN apk add --no-cache bash curl build-base
+#5 CACHED
+
+#6 [3/4] RUN for i in $(seq 1 10000); do echo "Line $i" >> /tmp/testfile; done
+#6 CACHED
+
+#7 [4/4] RUN curl -s https://raw.githubusercontent.com/docker-library/hello-world/master/hello.c -o hello.c   && gcc hello.c -o hello
+#7 CACHED
+
+#8 exporting to image
+#8 exporting layers done
+#8 writing image sha256:fe61f40db7df12a5975e3a431eb4c6e29c805735d6705e61e04a294d15139bcb done
+#8 naming to docker.io/library/benchmark:test done
+#8 DONE 0.0s
+[Run #2] Build duration: .470282732s
+
+[08:41:46] Run #3
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile.benchmark
+#1 DONE 0.0s
+
+#1 [internal] load build definition from Dockerfile.benchmark
+#1 transferring dockerfile: 439B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/alpine:3.22.2
+#2 DONE 0.3s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/4] FROM docker.io/library/alpine:3.22.2@sha256:4b7ce07002c69e8f3d704a9c5d6fd3053be500b7f1c69fc0d80990c2ad8dd412
+#4 DONE 0.0s
+
+#5 [2/4] RUN apk add --no-cache bash curl build-base
+#5 CACHED
+
+#6 [3/4] RUN for i in $(seq 1 10000); do echo "Line $i" >> /tmp/testfile; done
+#6 CACHED
+
+#7 [4/4] RUN curl -s https://raw.githubusercontent.com/docker-library/hello-world/master/hello.c -o hello.c   && gcc hello.c -o hello
+#7 CACHED
+
+#8 exporting to image
+#8 exporting layers done
+#8 writing image sha256:fe61f40db7df12a5975e3a431eb4c6e29c805735d6705e61e04a294d15139bcb done
+#8 naming to docker.io/library/benchmark:test done
+#8 DONE 0.0s
+[Run #3] Build duration: .473308500s
+
+Final image size: 252MB
