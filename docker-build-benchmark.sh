@@ -33,7 +33,7 @@ for i in $(seq 1 $BUILD_ITERATIONS); do
   docker build --no-cache --progress=plain -t "$IMAGE_NAME" -f "$DOCKERFILE_PATH" . 2>&1 | tee -a "$RESULT_FILE"
   END=$(date +%s.%N)
 
-  DURATION=$(echo "$END - $START" | bc)
+  DURATION=$(awk "BEGIN {print $END - $START}")
   echo "[Run #$i] Build duration: ${DURATION}s" | tee -a "$RESULT_FILE"
 
   # Optional: clean cache between builds (uncomment to disable caching)
@@ -48,4 +48,6 @@ echo "Final image size: $HUMAN_SIZE" | tee -a "$RESULT_FILE"
 
 echo "=== Benchmark Completed ==="
 echo "Results saved to: $RESULT_FILE"
+echo "Build times: $DURATION seconds per iteration"
+echo "Build durations recorded for $BUILD_ITERATIONS iterations."
 
