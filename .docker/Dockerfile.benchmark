@@ -1,0 +1,14 @@
+# Dockerfile for build benchmarking
+FROM alpine:3.22.2
+
+RUN apk add --no-cache bash curl build-base
+
+# Simulate a compute-heavy build step
+RUN for i in $(seq 1 10000); do echo "Line $i" >> /tmp/testfile; done
+
+# Simulate dependency installation
+RUN curl -s https://raw.githubusercontent.com/docker-library/hello-world/master/hello.c -o hello.c \
+  && gcc hello.c -o hello
+
+CMD ["./hello"]
+
