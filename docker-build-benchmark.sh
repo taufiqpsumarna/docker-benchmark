@@ -30,7 +30,7 @@ for i in $(seq 1 $BUILD_ITERATIONS); do
   echo "[$(date '+%H:%M:%S')] Run #$i" | tee -a "$RESULT_FILE"
 
   START=$(date +%s.%N)
-  docker build --progress=plain -t "$IMAGE_NAME" -f "$DOCKERFILE_PATH" . 2>&1 | tee -a "$RESULT_FILE"
+  docker build --no-cache --progress=plain -t "$IMAGE_NAME" -f "$DOCKERFILE_PATH" . 2>&1 | tee -a "$RESULT_FILE"
   END=$(date +%s.%N)
 
   DURATION=$(echo "$END - $START" | bc)

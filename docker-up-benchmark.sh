@@ -1,3 +1,3 @@
 #!/bin/bash
 docker-compose down 
-docker-compose up -d --build && docker-compose logs -f
+docker-compose up -d --no-cache --build && docker-compose logs -f
