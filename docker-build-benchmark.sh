@@ -13,7 +13,7 @@ DOCKERFILE_PATH=".docker/Dockerfile.benchmark"
 BUILD_ITERATIONS=${BUILD_ITERATIONS:-3}
 RESULT_DIR="./results"
 TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
-RESULT_FILE="${RESULT_DIR}/docker-build-${TIMESTAMP}.txt"
+RESULT_FILE="${RESULT_DIR}/docker-build-${TIMESTAMP}.log"
 
 # Prepare result directory
 mkdir -p "$RESULT_DIR"

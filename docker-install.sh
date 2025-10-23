@@ -14,7 +14,7 @@ echo "=== Installing Docker Engine version ${DOCKER_VERSION} ==="
 
 # 1. Download and run official Docker convenience script
 curl -fsSL https://get.docker.com -o get-docker.sh
-sudo sh get-docker.sh --version $DOCKER_VERSION --chanle $DOCKER_CHANNEL
+sudo sh get-docker.sh --version $DOCKER_VERSION --channel $DOCKER_CHANNEL
 
 # 2. Enable and start Docker
 sudo systemctl enable docker
